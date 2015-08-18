@@ -26,6 +26,7 @@ $list | ForEach-Object {
             Write-Host $_.Name -ForegroundColor Green}
         
         else {
+            Write-Output $_.Name | Out-File C:\AD\noreplyComputers.txt -Append -Encoding ASCII
             Write-Host $_.Name -ForegroundColor Red}
 }
 
